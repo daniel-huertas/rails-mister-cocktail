@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+Cocktail.destroy_all
 Ingredient.destroy_all
 ingredients_attributes = [
   {name:         "lemon"},
