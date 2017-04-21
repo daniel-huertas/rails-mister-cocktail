@@ -1,0 +1,12 @@
+
+  <div> <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description, placeholder: "Dose description" %>
+    <%= f.input :ingredient_id, collection: Ingredient.all %>
+      <div class="form-group">
+        <%= f.submit "Add the dose!", class: "btn btn-success" %>
+        <%= link_to "Back to your cocktail", @cocktail, class: "btn btn-danger"  %>
+
+      </div>
+    <% end %>
+  </div>
+

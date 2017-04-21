@@ -1,0 +1,9 @@
+<body class = "text-center">
+<div class = "form-group">
+  <%= simple_form_for @cocktail do |f| %>
+  <%= f.input :name, placeholder: 'Cocktail name'%>
+  <%= f.submit "Create!", class: "btn btn-success" %>
+  <%= link_to "Back", cocktails_path, class: "btn btn-danger"  %>
+  <% end %>
+</div>
+</body>
