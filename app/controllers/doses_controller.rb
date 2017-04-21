@@ -1,6 +1,6 @@
 class DosesController < ApplicationController
 
-before_action :set_cocktail, only: [:new, :create, :destroy]
+before_action :set_cocktail, only: [:new, :create]
 before_action :set_dose, only: [:destroy]
 
   def new
@@ -19,10 +19,9 @@ before_action :set_dose, only: [:destroy]
   end
 
   def destroy
-    @dose.cocktail = @cocktail
-    # @dose.ingredient = @ingredient
+    @cocktail = @dose.cocktail
     @dose.destroy
-    redirect_to cocktail_path(@cocktail)
+    redirect_to @cocktail
   end
 
 
